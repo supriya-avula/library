@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRARY</title>
+    <link rel="stylesheet" href="library.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M11 4.7C8.7 4.1 6.8 4 4 4a2 2 0 0 0-2 2v11c0 1.1 1 2 2 2 2.8 0 4.5.2 7 .8v-15Zm2 15.1c2.5-.6 4.2-.8 7-.8a2 2 0 0 0 2-2V6c0-1-.9-2-2-2-2.8 0-4.7.1-7 .7v15.1Z" clip-rule="evenodd"/>
+            </svg>  
+            LIBRARY CATALOG
+        </h1>
+        <div class="catalog-toolbar">
+            <div class="library-catalog">
+            </div>
+            <div class="search-option">
+                <form id="searchBookForm">
+                    <input type="text" id="search" placeholder="Search...">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <div class="add-book-icon">
+                <a href="#" onclick="toggleAddBookSection()">
+                    <svg class="text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="black" viewBox="0 0 24 24" width="30" height="30">
+                        <path fill-rule="evenodd" d="M4.9 3C3.9 3 3 3.8 3 4.9V9c0 1 .8 1.9 1.9 1.9H9c1 0 1.9-.8 1.9-1.9V5c0-1-.8-1.9-1.9-1.9H5Zm10 0c-1 0-1.9.8-1.9 1.9V9c0 1 .8 1.9 1.9 1.9H19c1 0 1.9-.8 1.9-1.9V5c0-1-.8-1.9-1.9-1.9h-4Zm-10 10c-1 0-1.9.8-1.9 1.9V19c0 1 .8 1.9 1.9 1.9H9c1 0 1.9-.8 1.9-1.9v-4c0-1-.8-1.9-1.9-1.9H5ZM18 14a1 1 0 1 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0v-2h2a1 1 0 1 0 0-2h-2v-2Z" clip-rule="evenodd"/>
+                    </svg>                  
+                </a>
+            </div>
+            
+               
+        </div>
+        <div id="add-book-section" style="display: none;">
+            <h2>
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width="30" height="30">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19V4c0-.6.4-1 1-1h12c.6 0 1 .4 1 1v13H7a2 2 0 0 0-2 2Zm0 0c0 1.1.9 2 2 2h12M9 3v14m7 0v4"/>
+                  </svg>
+                Add New Book</h2>
+            <form id="addBookForm">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author:</label>
+                    <input type="text" class="form-control" id="author"required>
+                </div>
+                <div class="form-group">
+                    <label for="isbn">ISBN:</label>
+                    <input type="text" class="form-control" id="isbn" pattern="*[0-9]" required>
+                </div>
+                <div class="form-group">
+                    <label for="genre">Genre:</label>
+                    <input type="text" class="form-control" id="genre" pattern="*[A-Za-z]"required>
+                </div>
+                <div class="form-group">
+                    <label for="availability">Availability:</label>
+                    <select class="form-control" id="availability" required>
+                        <option value="">Please select</option>
+                        <option value="available">Available</option>
+                        <option value="notavailable">Not Available</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="edition">Edition:</label><br>
+                    <input type="text" id="edition" name="edition" class="form-control"><br>
+                </div>
+                <div class="form-group">
+                    <label for="published_date">Published Date:</label><br>
+                    <input type="date" id="published_date" name="published_date" class="form-control"><br><br>
+                </div>
+                
+            
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+        <div id="bookDisplay"></div>
+    </div>
+
+    <script src="library.js"></script>
+</body>
+</html>

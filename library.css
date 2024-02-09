@@ -1,0 +1,259 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    background-image: url("image/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* background-image: url("image/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover; */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Catalog toolbar */
+.catalog-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.library-catalog, .search-option, .add-book-icon {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.library-catalog h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.search-option form {
+    display: flex;
+}
+
+.search-option input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-option button {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-option button:hover {
+    background-color: #0056b3;
+}
+
+/* Add book section */
+#add-book-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#add-book-section h2 {
+    margin-top: 0;
+    color: #333;
+    /* background-image: url("image/bg.jpg"); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+#addBookForm .form-group {
+    margin-bottom: 10px;
+}
+
+#addBookForm label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#addBookForm input[type="text"], #addBookForm select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#addBookForm button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#addBookForm button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Book display */
+#bookDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.book-card {
+    padding: 20px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow effect */
+    transition: box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adjusted shadow on hover */
+    transform: translateY(-3px);
+}
+
+.book-card h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.book-card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* CSS for buttons */
+.btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+/* CSS for remove button */
+.remove-btn {
+    background-color: #dc3545; /* Red color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px; /* Add margin-right for spacing */
+}
+
+
+.remove-btn:hover {
+    background-color: #c82333; /* Darker shade of red on hover */
+}
+
+/* CSS for checkout button */
+.checkout-btn {
+    background-color: #28a745; /* Green color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.checkout-btn:hover {
+    background-color: #218838; /* Darker shade of green on hover */
+}
+
+/* CSS for return button */
+.return-btn {
+    background-color: #ffc107; /* Yellow color */
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.return-btn:hover {
+    background-color: #e0a800; /* Darker shade of yellow on hover */
+}
+.container h1 {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    justify-content: center; /* Aligns items horizontally */
+}
+
+.icon {
+    width: 70px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin-right: 10px; /* Adjust spacing between icon and text */
+    flex-shrink: 0; /* Prevents the icon from shrinking */
+}
+
+
